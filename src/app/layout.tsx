@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import Sidebar from "~/components/sidebar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,9 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable} bg-white`}>
-        <TRPCReactProvider>
-          <div className="max-w-[1163px]">{children}</div>
-        </TRPCReactProvider>
+        <div className="flex flex-row gap-10">
+          <TRPCReactProvider>
+            <Sidebar />
+            <div className="max-w-[1163px]">{children}</div>
+          </TRPCReactProvider>
+        </div>
       </body>
     </html>
   );
