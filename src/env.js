@@ -14,6 +14,24 @@ export const env = createEnv({
         (str) => !str.includes("YOUR_MYSQL_URL_HERE"),
         "You forgot to change the default URL"
       ),
+    DATABASE_HOST: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_MYSQL_HOST_HERE"),
+        "You forgot to change the default HOST"
+      ),
+    DATABASE_USERNAME: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_MYSQL_USERNAME_HERE"),
+        "You forgot to change the default USERNAME"
+      ),
+    DATABASE_PASSWORD: z
+      .string()
+      .refine(
+        (str) => !str.includes("YOUR_MYSQL_PASSWORD_HERE"),
+        "You forgot to change the default PASSWORD"
+      ),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -34,6 +52,9 @@ export const env = createEnv({
    */
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
+    DATABASE_HOST: process.env.DATABASE_HOST,
+    DATABASE_USERNAME: process.env.DATABASE_USERNAME,
+    DATABASE_PASSWORD: process.env.DATABASE_PASSWORD,
     NODE_ENV: process.env.NODE_ENV,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
