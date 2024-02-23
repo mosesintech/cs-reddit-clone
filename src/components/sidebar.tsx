@@ -17,7 +17,7 @@ export default function Sidebar() {
           </span>
         </Link>
 
-        <Link href="/">
+        <Link href="/users/thisuser">
           <span className="flex w-60 flex-row items-center gap-4 rounded-xl px-4 py-3">
             <Image
               src={"/images/icons/posts-icon.svg"}
