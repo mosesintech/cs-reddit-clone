@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      boxShadow: {
+        'input': '0px 8px 16px 0px rgba(0, 0, 0, 0.05)',
+      },
       colors: {
         indigo: {
           50: '#eef2ff',
