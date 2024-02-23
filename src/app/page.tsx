@@ -1,6 +1,6 @@
 import { unstable_noStore as noStore } from "next/cache";
 
-import { CreatePost } from "~/app/_components/create-post";
+import { CreatePost } from "~/components/create-post";
 import Post from "~/components/post";
 import { api } from "~/trpc/server";
 
@@ -40,7 +40,7 @@ function AllPosts() {
     <div className="flex w-full flex-col items-center justify-center">
       {/* wraps all posts */}
 
-      <Post />
+      <Post isHome={true} />
     </div>
   );
 }
