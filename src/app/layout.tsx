@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable} bg-white`}>
-        <div className="flex flex-row gap-10">
+        <div className="mx-auto flex flex-row gap-36">
           <TRPCReactProvider>
             <Sidebar />
             <div className="max-w-[1163px]">{children}</div>

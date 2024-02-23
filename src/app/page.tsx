@@ -8,8 +8,8 @@ export default async function Home() {
   noStore();
 
   return (
-    <main className="flex min-h-screen max-w-[600px] flex-col items-center justify-center">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+    <main className="min-h-screen max-w-[600px]">
+      <div className="container flex flex-col items-center justify-center px-4 py-8">
         <CrudShowcase />
       </div>
     </main>
