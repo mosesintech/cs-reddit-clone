@@ -3,6 +3,7 @@ import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
 
 import Post from "~/components/post";
+import Comments from "~/components/comments";
 import { api } from "~/trpc/server";
 
 export default async function SinglePostPage() {
@@ -27,6 +28,7 @@ export default async function SinglePostPage() {
           </Link>
           <Post />
 
+          <p className="px-4 pt-4 text-base font-medium">All comments</p>
 
           {latestPost ? (
             <p className="truncate">
@@ -34,7 +36,8 @@ export default async function SinglePostPage() {
             </p>
           ) : (
             <>
-              <p className="p-4">There are no comments yet.</p>
+              {/* <p className="p-4">There are no comments yet.</p> */}
+              <Comments />
             </>
           )}
         </div>
