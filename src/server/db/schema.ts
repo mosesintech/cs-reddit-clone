@@ -7,7 +7,6 @@ import {
   varchar, 
   timestamp, 
   mysqlTableCreator, 
-  type AnyMySqlColumn 
 } from "drizzle-orm/mysql-core";
 
 /**

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="flex flex-col items-start justify-between border border-y-0 border-l-0 border-gray-200 p-4 text-base font-medium">
+    <div className="flex min-h-screen flex-col items-start justify-between border border-y-0 border-l-0 border-gray-200 p-4 text-base font-medium">
       <div className="">
         <Link href="/">
           <span className="flex w-60 flex-row items-center gap-4 rounded-xl bg-gray-50 px-4 py-3">
@@ -29,7 +29,7 @@ export default function Sidebar() {
           </span>
         </Link>
 
-        <Link href="/">
+        <Link href="/login">
           <span className="flex w-60 flex-row items-center gap-4 rounded-xl px-4 py-3">
             <Image
               src={"/images/icons/login-icon.svg"}
