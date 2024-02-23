@@ -22,6 +22,7 @@ export const createTable = pgTableCreator((name) => `cs-reddit-clone_${name}`);
 export const users = createTable("users", {
   id: serial("id").primaryKey(),
   username: varchar("username").notNull(),
+  fullName: varchar("full_name").notNull(),
   avatarUrl: varchar("avatar_url").default('/images/person.png'),
 });
 
